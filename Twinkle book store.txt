@@ -1,0 +1,186 @@
+CREATE TABLE book (
+  id INT,
+  name VARCHAR
+);
+
+INSERT INTO book (id, name) VALUES (1, 'tinkle1');
+INSERT INTO book (id, name) VALUES (2, 'tinkle2');
+INSERT INTO book (id, name) VALUES (3, 'tinkle2');
+INSERT INTO book (id, name) VALUES (4, 'tinkle2');
+INSERT INTO book (id, name) VALUES (5, 'tinkle2');
+
+CREATE TABLE customer (
+  id INT,
+  customer_name VARCHAR,
+  dob DATE,
+  address VARCHAR,
+  phone_number VARCHAR
+  
+);
+INSERT INTO customer (id, customer_name, dob, address, phone_number) VALUES (1, 'cust1', '1999-01-01', 'addr1', '12345');
+
+CREATE TABLE book_order (
+  id INT,
+  customer_id INT,
+  order_date DATE,
+  amount INT
+);
+INSERT INTO book_order (id, customer_id, order_date, amount) VALUES (1, 1, '2020-01-01', 100);
+INSERT INTO book_order (id, customer_id, order_date, amount) VALUES (2, 1, '2020-01-02', 10);
+INSERT INTO book_order (id, customer_id, order_date, amount) VALUES (2, 1, '2020-01-02', 550);
+INSERT INTO book_order (id, customer_id, order_date, amount) VALUES (2, 1, '2020-01-02', 500);
+
+CREATE TABLE membership (
+  customer_id INT,
+  dateOfPurchase DATE,
+  dateOfExit DATE null
+);
+INSERT INTO membership (customer_id, dateOfPurchase) VALUES (1,  '1999-01-01');
+
+
+CREATE TABLE twinkle book store (
+  "t" undefined,
+  "w" undefined,
+  "i" undefined,
+  "n" undefined,
+  "k" undefined,
+  "l" undefined,
+  "e" undefined
+);
+
+INSERT INTO twinkle book store
+  ("t", "w", "i", "n", "k", "l", "e")
+VALUES;
+
+CREATE TABLE twinkle book store (
+  "CREATE" VARCHAR(14),
+  "TABLE" VARCHAR(10),
+  "book" VARCHAR(10),
+  "(" VARCHAR(13)
+);
+
+INSERT INTO twinkle book store
+  ("CREATE", "TABLE", "book", "(")
+VALUES
+  ('id', 'INT,'),
+  ('name', 'VARCHAR'),
+  ('INSERT', 'INTO', 'book', '(id,'),
+  ('INSERT', 'INTO', 'book', '(id,'),
+  ('INSERT', 'INTO', 'book', '(id,'),
+  ('INSERT', 'INTO', 'book', '(id,'),
+  ('INSERT', 'INTO', 'book', '(id,'),
+  ('CREATE', 'TABLE', 'customer', '('),
+  ('id', 'INT,'),
+  ('customer_name', 'VARCHAR,'),
+  ('dob', 'DATE,'),
+  ('address', 'VARCHAR,'),
+  ('phone_number', 'VARCHAR'),
+  ('INSERT', 'INTO', 'customer', '(id,'),
+  ('CREATE', 'TABLE', 'book_order', '('),
+  ('id', 'INT,'),
+  ('customer_id', 'INT,'),
+  ('order_date', 'DATE,'),
+  ('amount', 'INT'),
+  ('INSERT', 'INTO', 'book_order', '(id,'),
+  ('INSERT', 'INTO', 'book_order', '(id,'),
+  ('INSERT', 'INTO', 'book_order', '(id,'),
+  ('INSERT', 'INTO', 'book_order', '(id,'),
+  ('CREATE', 'TABLE', 'membership', '('),
+  ('customer_id', 'INT,'),
+  ('dateOfPurchase', 'DATE,'),
+  ('dateOfExit', 'DATE', 'null'),
+  ('INSERT', 'INTO', 'membership', '(customer_id,'),
+  ('CREATE', 'TABLE', 'twinkle', 'book'),
+  ('t', 'undefined,'),
+  ('w', 'undefined,'),
+  ('i', 'undefined,'),
+  ('n', 'undefined,'),
+  ('k', 'undefined,'),
+  ('l', 'undefined,'),
+  ('e', 'undefined'),
+  ('INSERT', 'INTO', 'twinkle', 'book'),
+  ('("t",', 'w"', 'i"', 'n"'),
+  ('VALUES;');
+
+CREATE TABLE twinkle book store (
+  "-- SELECT" VARCHAR(146),
+  "FROM book;" VARCHAR(108)
+);
+
+INSERT INTO twinkle book store
+  ("-- SELECT", "FROM book;")
+VALUES
+  ('-- SELECT', 'FROM customer;'),
+  ('-- SELECT', 'FROM book_order;'),
+  ('-- SELECT', 'FROM membership;'),
+  ('-- select', 'from customer c left join book_order b on c.id = b.customer_id'),
+  ('-- select 0.95', '(avg(b.amount)) from customer c,  membership m, book_order b where c.id = m.customer_id AND  b.amount >= 500'),
+  ('--- check for customer exists if yes is he/she is a member'),
+  ('select'),
+  ('(case when exists (select', 'from customer c,  membership m  where c.id = m.customer_id)'),
+  ('then 1'),
+  ('else 0'),
+  ('end) as column;'),
+  ('--- Membershp card is enrolled for the first time'),
+  ('INSERT INTO membership (customer_id, dateOfPurchase) VALUES (2,  '1999-01-01');'),
+  ('select 0.95', '(b.amount) from customer c,  membership m, book_order b where c.id = 2;'),
+  ('--- check if the customer is new  as per above query, insert new customer and book order details give 2% discount'),
+  ('select 0.98', '(b.amount) from customer c, book_order b where c.id = 2;'),
+  ('---check if new customer, if the bill is more than 5000 then discount 3%'),
+  ('select 0.97', '(b.amount) from customer c,  membership m, book_order b where c.id = m.customer_id AND  b.amount >= 5000;'),
+  ('--if the existing customer is member since 5 years then flat discount of 20%'),
+  ('SELECT', 'FROM membership WHERE dateOfPurchase < now() - '5 years'::interval ;'),
+  ('--check if the existing customer and number of purchases is greater than 5 books if count is greater than 5 then discount 5%'),
+  ('select count(', ') from book_order where customer_id = 2 AND order_date = '2020-01-01'::date;'),
+  ('--- Query for the search box based on name and phone number'),
+  ('--Get the customer id based on name and phone number'),
+  ('select id from customer where customer_name = 'cust1' OR phone_number = '1234';'),
+  ('---- Once u get the cust id, use this id for the search criteria and populate rest of the details.'),
+  ('select c.customer_name, c.dob, c.address, c.phone_number,  m.dateOfPurchase from customer c, membership m where c.id = m.customer_id AND c.id = 1;');
+
+
+
+-------------------------------------------------------------------------------------
+-- SELECT * FROM book;
+-- SELECT * FROM customer;
+-- SELECT * FROM book_order;
+-- SELECT * FROM membership;
+-- select * from customer c left join book_order b on c.id = b.customer_id
+-- select 0.95*(avg(b.amount)) from customer c,  membership m, book_order b where c.id = m.customer_id AND  b.amount >= 500 
+
+--- check for customer exists if yes is he/she is a member
+select
+  (case when exists (select * from customer c,  membership m  where c.id = m.customer_id)
+    then 1
+    else 0
+  end) as column;
+  
+--- Membershp card is enrolled for the first time
+INSERT INTO membership (customer_id, dateOfPurchase) VALUES (2,  '1999-01-01'); 
+ select 0.95*(b.amount) from customer c,  membership m, book_order b where c.id = 2;
+ 
+ 
+--- check if the customer is new  as per above query, insert new customer and book order details give 2% discount
+
+select 0.98*(b.amount) from customer c, book_order b where c.id = 2; 
+
+---check if new customer, if the bill is more than 5000 then discount 3%
+ select 0.97*(b.amount) from customer c,  membership m, book_order b where c.id = m.customer_id AND  b.amount >= 5000;
+ 
+ 
+--if the existing customer is member since 5 years then flat discount of 20%
+SELECT * FROM membership WHERE dateOfPurchase < now() - '5 years'::interval ;
+ 
+ --check if the existing customer and number of purchases is greater than 5 books if count is greater than 5 then discount 5%
+select count(*) from book_order where customer_id = 2 AND order_date = '2020-01-01'::date;
+--------------------------------------------------------
+--- Query for the search box based on name and phone number
+ 
+--Get the customer id based on name and phone number
+select id from customer where customer_name = 'cust1' OR phone_number = '1234';
+ 
+---- Once u get the cust id, use this id for the search criteria and populate rest of the details.
+
+select c.customer_name, c.dob, c.address, c.phone_number,  m.dateOfPurchase from customer c, membership m where c.id = m.customer_id AND c.id = 1;
+ 
+
